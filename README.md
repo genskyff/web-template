@@ -10,7 +10,7 @@ This is a development template based on Webpack, designed for projects using Rea
 - **PostCSS**: A tool for transforming CSS with JavaScript plugins.
 - **Webpack**: A module bundler for modern JavaScript applications.
 - **pnpm**: A fast, disk space efficient package manager.
-- **eslint + prettier**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
+- **ESLint + Prettier**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
 - **Babel**: A JavaScript compiler that allows you to use the latest features of the JavaScript language.
 
 ## Getting Started
@@ -19,7 +19,7 @@ This is a development template based on Webpack, designed for projects using Rea
 
 Make sure you have the following installed:
 
-- Node.js
+- Node.js (v20 or higher)
 - pnpm
 
 ### Installation
@@ -55,4 +55,12 @@ To build the project for production, run:
 
 ```shell
 pnpm run build
+```
+
+### Linting
+
+To lint the project, run:
+
+```shell
+pnpm run lint
 ```
