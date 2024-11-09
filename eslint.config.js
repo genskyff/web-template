@@ -10,7 +10,7 @@ export default tseslint.config(
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     languageOptions: {
-      globals: globals.browser,
+      globals: [globals.browser, globals.node],
     },
     plugins: {
       "react-hooks": reactHooks,

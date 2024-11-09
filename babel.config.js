@@ -1,3 +1,5 @@
+const isDev = process.env.NODE_ENV === "development";
+
 const presets = [
   [
     "@babel/preset-env",
@@ -15,7 +17,7 @@ const presets = [
   "@babel/preset-typescript",
 ];
 
-const plugins = [];
+const plugins = [isDev && "react-refresh/babel"].filter(Boolean);
 
 export default (api) => {
   api.cache(true);
