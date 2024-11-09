@@ -1,6 +1,5 @@
 import path from "path";
 import webpack from "webpack";
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 export default {
   entry: { index: path.resolve("./src/index.tsx") },
@@ -58,6 +57,5 @@ export default {
       /moment[\\/]locale$/,
       /en|ja|zh-cn|zh-tw/,
     ),
-    new ForkTsCheckerWebpackPlugin(),
   ],
 };
