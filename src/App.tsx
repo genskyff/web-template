@@ -1,4 +1,4 @@
-import { useState, FC } from "react";
+import { useState, type FC } from "react";
 import reactLogo from "./assets/react.svg";
 import styles from "./App.scss";
 
