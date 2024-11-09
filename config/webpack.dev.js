@@ -1,6 +1,7 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 
 export default {
   mode: "development",
@@ -40,6 +41,7 @@ export default {
       template: path.resolve("./index.html"),
     }),
     new ForkTsCheckerWebpackPlugin(),
+    new ReactRefreshPlugin(),
   ],
   devtool: "eval-cheap-module-source-map",
   devServer: {

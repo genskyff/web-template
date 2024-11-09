@@ -1,6 +1,8 @@
 import path from "path";
 import webpack from "webpack";
 
+const isDev = process.env.NODE_ENV === "development";
+
 export default {
   entry: { index: path.resolve("./src/index.tsx") },
   output: {
@@ -26,6 +28,7 @@ export default {
             transform: {
               react: {
                 runtime: "automatic",
+                refresh: isDev,
               },
             },
           },
