@@ -11,7 +11,7 @@ This is a development template based on Webpack, designed for projects using Rea
 - **Webpack**: A module bundler for modern JavaScript applications.
 - **pnpm**: A fast, disk space efficient package manager.
 - **ESLint + Prettier**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
-- **Babel**: A JavaScript compiler that allows you to use the latest features of the JavaScript language.
+- **SWC**: A super-fast JavaScript/TypeScript compiler.
 
 ## Getting Started
 

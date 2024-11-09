@@ -12,7 +12,24 @@ export default {
       {
         test: /\.(ts|tsx)$/,
         include: path.resolve("./src"),
-        loader: "babel-loader",
+        loader: "swc-loader",
+        options: {
+          env: {
+            coreJs: "3.39",
+            mode: "usage",
+          },
+          jsc: {
+            parser: {
+              syntax: "typescript",
+              tsx: true,
+            },
+            transform: {
+              react: {
+                runtime: "automatic",
+              },
+            },
+          },
+        },
       },
       {
         test: /\.(bmp|gif|ico|jpg|jpeg|png|svg|webp)$/,
