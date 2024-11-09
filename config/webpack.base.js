@@ -12,7 +12,7 @@ export default {
       {
         test: /\.(ts|tsx)$/,
         include: path.resolve("./src"),
-        use: ["babel-loader"],
+        loader: "babel-loader",
       },
       {
         test: /\.(bmp|gif|ico|jpg|jpeg|png|svg|webp)$/,
