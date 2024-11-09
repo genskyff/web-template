@@ -1,8 +1,8 @@
 import { merge } from "webpack-merge";
 
-import baseConfig from "./config/webpack.base.js";
-import devConfig from "./config/webpack.dev.js";
-import prodConfig from "./config/webpack.prod.js";
+import baseConfig from "./config/rspack.base.js";
+import devConfig from "./config/rspack.dev.js";
+import prodConfig from "./config/rspack.prod.js";
 
 export default (env, args) => {
   switch (args.mode) {

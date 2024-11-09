@@ -1,6 +1,6 @@
-# Webpack Template
+# Rspack Template
 
-This is a development template based on Webpack, designed for projects using React, TypeScript, and SCSS. The package manager used in this template is pnpm.
+This is a development template based on Rspack, designed for projects using React, TypeScript, and SCSS. The package manager used in this template is pnpm.
 
 ## Features
 
@@ -8,10 +8,9 @@ This is a development template based on Webpack, designed for projects using Rea
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
 - **SCSS**: A preprocessor scripting language that is interpreted or compiled into CSS.
 - **PostCSS**: A tool for transforming CSS with JavaScript plugins.
-- **Webpack**: A module bundler for modern JavaScript applications.
+- **Rspack**: A Webpack-based build tool that provides a simple and flexible configuration.
 - **pnpm**: A fast, disk space efficient package manager.
 - **ESLint + Prettier**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
-- **SWC**: A super-fast JavaScript/TypeScript compiler.
 
 ## Getting Started
 

@@ -1,5 +1,7 @@
 import path from "path";
-import webpack from "webpack";
+import rspack from "@rspack/core";
+
+const isDev = process.env.NODE_ENV === "development";
 
 export default {
   entry: { index: path.resolve("./src/index.tsx") },
@@ -12,7 +14,7 @@ export default {
       {
         test: /\.(ts|tsx)$/,
         include: path.resolve("./src"),
-        loader: "swc-loader",
+        loader: "builtin:swc-loader",
         options: {
           env: {
             coreJs: "3.39",
@@ -26,6 +28,7 @@ export default {
             transform: {
               react: {
                 runtime: "automatic",
+                refresh: isDev,
               },
             },
           },
@@ -70,7 +73,7 @@ export default {
     },
   },
   plugins: [
-    new webpack.ContextReplacementPlugin(
+    new rspack.ContextReplacementPlugin(
       /moment[\\/]locale$/,
       /en|ja|zh-cn|zh-tw/,
     ),

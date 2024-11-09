@@ -1,8 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
-import TerserPlugin from "terser-webpack-plugin";
+import rspack from "@rspack/core";
 
 export default {
   mode: "production",
@@ -18,7 +16,7 @@ export default {
         test: /\.(css|sass|scss)$/,
         include: path.resolve("./src"),
         use: [
-          MiniCssExtractPlugin.loader,
+          rspack.CssExtractRspackPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -39,24 +37,8 @@ export default {
     moduleIds: "deterministic",
     minimize: true,
     minimizer: [
-      new CssMinimizerPlugin({
-        minimizerOptions: {
-          preset: [
-            "default",
-            {
-              discardComments: { removeAll: true },
-            },
-          ],
-        },
-      }),
-      new TerserPlugin({
-        terserOptions: {
-          format: {
-            comments: false,
-          },
-        },
-        extractComments: false,
-      }),
+      new rspack.LightningCssMinimizerRspackPlugin(),
+      new rspack.SwcJsMinimizerRspackPlugin(),
     ],
   },
   plugins: [
@@ -64,7 +46,7 @@ export default {
       title: "Webpack Prod",
       template: path.resolve("./index.html"),
     }),
-    new MiniCssExtractPlugin({
+    new rspack.CssExtractRspackPlugin({
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].chunk.css",
     }),
