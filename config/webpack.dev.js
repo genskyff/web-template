@@ -1,5 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 export default {
   mode: "development",
@@ -38,6 +39,7 @@ export default {
       title: "Webpack Dev",
       template: path.resolve("./index.html"),
     }),
+    new ForkTsCheckerWebpackPlugin(),
   ],
   devtool: "eval-cheap-module-source-map",
   devServer: {
