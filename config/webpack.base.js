@@ -35,6 +35,14 @@ export default {
         },
       },
       {
+        test: /\.m?js$/,
+        include: /[\\/]node_modules[\\/]/,
+        type: "javascript/auto",
+        resolve: {
+          fullySpecified: false,
+        },
+      },
+      {
         test: /\.(bmp|gif|ico|jpg|jpeg|png|svg|webp)$/,
         include: path.resolve("./src"),
         type: "asset",
