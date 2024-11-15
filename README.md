@@ -46,14 +46,14 @@ Make sure you have the following installed:
 To start the development server, run:
 
 ```shell
-pnpm run dev
+pnpm dev
 ```
 ### Building for Production
 
 To build the project for production, run:
 
 ```shell
-pnpm run build
+pnpm build
 ```
 
 ### Linting
@@ -61,5 +61,5 @@ pnpm run build
 To lint the project, run:
 
 ```shell
-pnpm run lint
+pnpm lint
 ```
