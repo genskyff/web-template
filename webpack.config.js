@@ -11,6 +11,8 @@ export default (env, args) => {
     case "production":
       return merge(baseConfig, prodConfig);
     default:
-      throw new Error("No matching configuration was found!");
+      throw new Error(
+        `No matching configuration was found for mode <${args.mode}>`,
+      );
   }
 };
