@@ -6,12 +6,12 @@ This is a development template based on Webpack, designed for projects using Rea
 
 - **React**: A JavaScript library for building user interfaces.
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Babel**: A JavaScript compiler that allows you to use the latest features of the JavaScript language.
 - **SCSS**: A preprocessor scripting language that is interpreted or compiled into CSS.
 - **PostCSS**: A tool for transforming CSS with JavaScript plugins.
 - **Webpack**: A module bundler for modern JavaScript applications.
 - **pnpm**: A fast, disk space efficient package manager.
 - **ESLint + Prettier**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
-- **Babel**: A JavaScript compiler that allows you to use the latest features of the JavaScript language.
 
 ## Getting Started
 
