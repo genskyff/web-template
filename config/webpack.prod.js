@@ -8,8 +8,9 @@ export default {
   mode: "production",
   bail: true,
   output: {
-    filename: "js/[name].[contenthash:8].js",
-    assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
+    filename: "static/js/[name].[contenthash:8].js",
+    chunkFilename: "static/js/[name].[contenthash:8].chunk.js",
+    assetModuleFilename: "static/assets/[name].[contenthash:8][ext][query]",
     clean: true,
   },
   module: {
@@ -65,8 +66,8 @@ export default {
       template: path.resolve("./index.html"),
     }),
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash:8].css",
-      chunkFilename: "css/[name].[contenthash:8].chunk.css",
+      filename: "static/css/[name].[contenthash:8].css",
+      chunkFilename: "static/css/[name].[contenthash:8].chunk.css",
     }),
   ],
   devtool: "source-map",

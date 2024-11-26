@@ -1,5 +1,6 @@
 import path from "path";
 import webpack from "webpack";
+import pkg from "../package.json" with { type: "json" };
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -19,6 +20,7 @@ export default {
           env: {
             coreJs: "3.39",
             mode: "usage",
+            targets: pkg.browserslist,
           },
           jsc: {
             parser: {
