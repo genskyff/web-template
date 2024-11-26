@@ -6,8 +6,9 @@ import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 export default {
   mode: "development",
   output: {
-    filename: "js/[name].js",
-    assetModuleFilename: "assets/[name][ext]",
+    filename: "static/js/[name].js",
+    chunkFilename: "static/js/[name].chunk.js",
+    assetModuleFilename: "static/assets/[name][ext]",
   },
   module: {
     rules: [
