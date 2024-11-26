@@ -6,8 +6,9 @@ This is a development template based on Rspack, designed for projects using Reac
 
 - **React**: A JavaScript library for building user interfaces.
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **SWC**: An extensible Rust-based platform for the next generation of fast developer tools
 - **SCSS**: A preprocessor scripting language that is interpreted or compiled into CSS.
-- **PostCSS**: A tool for transforming CSS with JavaScript plugins.
+- **Lightning CSS**: An extremely fast CSS parser, transformer, bundler, and minifier.
 - **Rspack**: A Webpack-based build tool that provides a simple and flexible configuration.
 - **pnpm**: A fast, disk space efficient package manager.
 - **ESLint + Prettier**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
