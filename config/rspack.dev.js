@@ -1,13 +1,15 @@
 import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import rspack from "@rspack/core";
+import pkg from "../package.json" with { type: "json" };
 import ReactRefreshPlugin from "@rspack/plugin-react-refresh";
+import { TsCheckerRspackPlugin } from "ts-checker-rspack-plugin";
 
 export default {
   mode: "development",
   output: {
-    filename: "js/[name].js",
-    assetModuleFilename: "assets/[name][ext]",
+    filename: "static/js/[name].js",
+    chunkFilename: "static/js/[name].chunk.js",
+    assetModuleFilename: "static/assets/[name][ext]",
   },
   module: {
     rules: [
@@ -26,7 +28,12 @@ export default {
               },
             },
           },
-          "postcss-loader",
+          {
+            loader: "builtin:lightningcss-loader",
+            options: {
+              targets: pkg.browserslist,
+            },
+          },
           "sass-loader",
         ],
       },
@@ -36,11 +43,11 @@ export default {
     moduleIds: "named",
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    new rspack.HtmlRspackPlugin({
       title: "Webpack Dev",
       template: path.resolve("./index.html"),
     }),
-    new ForkTsCheckerWebpackPlugin(),
+    new TsCheckerRspackPlugin(),
     new ReactRefreshPlugin(),
   ],
   devtool: "eval-cheap-module-source-map",
