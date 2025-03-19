@@ -8,15 +8,15 @@ export default {
   mode: "production",
   bail: true,
   output: {
-    filename: "static/js/[name].[contenthash:8].js",
-    chunkFilename: "static/js/[name].[contenthash:8].chunk.js",
     assetModuleFilename: "static/assets/[name].[contenthash:8][ext][query]",
+    chunkFilename: "static/js/[name].[contenthash:8].chunk.js",
+    filename: "static/js/[name].[contenthash:8].js",
     clean: true,
   },
   module: {
     rules: [
       {
-        test: /\.(css|sass|scss)$/,
+        test: /\.(c|sa|sc)ss$/,
         include: path.resolve("./src"),
         use: [
           MiniCssExtractPlugin.loader,
@@ -26,6 +26,7 @@ export default {
               importLoaders: 2,
               modules: {
                 namedExport: false,
+                exportLocalsConvention: "as-is",
                 localIdentName: "[name]__[local]--[hash:base64:5]",
               },
             },
@@ -37,8 +38,6 @@ export default {
     ],
   },
   optimization: {
-    moduleIds: "deterministic",
-    minimize: true,
     minimizer: [
       new CssMinimizerPlugin({
         minimizerOptions: {
@@ -66,8 +65,8 @@ export default {
       template: path.resolve("./index.html"),
     }),
     new MiniCssExtractPlugin({
-      filename: "static/css/[name].[contenthash:8].css",
       chunkFilename: "static/css/[name].[contenthash:8].chunk.css",
+      filename: "static/css/[name].[contenthash:8].css",
     }),
   ],
   devtool: "source-map",

@@ -10,20 +10,20 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.(jsx?|tsx?)$/,
         include: path.resolve("./src"),
         loader: "babel-loader",
       },
       {
-        test: /\.m?js$/,
-        include: /[\\/]node_modules[\\/]/,
+        test: /\.mjs$/,
+        include: /node_modules/,
         type: "javascript/auto",
         resolve: {
           fullySpecified: false,
         },
       },
       {
-        test: /\.(bmp|gif|ico|jpg|jpeg|png|svg|webp)$/,
+        test: /\.(avif|bmp|gif|ico|jpg|jpeg|png|svg|webp)$/,
         include: path.resolve("./src"),
         type: "asset",
       },
@@ -45,15 +45,17 @@ export default {
     ],
   },
   resolve: {
+    alias: {
+      "@": path.resolve("./src"),
+    },
     extensions: [".js", ".jsx", ".ts", ".tsx", "..."],
-    modules: [path.resolve("./src"), "node_modules"],
   },
   optimization: {
     runtimeChunk: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /[\\/]node_modules[\\/]/,
+          test: /node_modules/,
           name: "vendors",
           chunks: "all",
         },
