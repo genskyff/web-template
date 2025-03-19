@@ -13,12 +13,12 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.(jsx?|tsx?)$/,
         include: path.resolve("./src"),
         loader: "builtin:swc-loader",
         options: {
           env: {
-            coreJs: "3.39",
+            coreJs: "3.41",
             mode: "usage",
             target: pkg.browserslist,
           },
@@ -30,6 +30,7 @@ export default {
             transform: {
               react: {
                 runtime: "automatic",
+                development: isDev,
                 refresh: isDev,
               },
             },
@@ -37,15 +38,15 @@ export default {
         },
       },
       {
-        test: /\.m?js$/,
-        include: /[\\/]node_modules[\\/]/,
+        test: /\.mjs$/,
+        include: /node_modules/,
         type: "javascript/auto",
         resolve: {
           fullySpecified: false,
         },
       },
       {
-        test: /\.(bmp|gif|ico|jpg|jpeg|png|svg|webp)$/,
+        test: /\.(avif|bmp|gif|ico|jpg|jpeg|png|svg|webp)$/,
         include: path.resolve("./src"),
         type: "asset",
       },
@@ -67,15 +68,17 @@ export default {
     ],
   },
   resolve: {
+    alias: {
+      "@": path.resolve("./src"),
+    },
     extensions: [".js", ".jsx", ".ts", ".tsx", "..."],
-    modules: [path.resolve("./src"), "node_modules"],
   },
   optimization: {
     runtimeChunk: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /[\\/]node_modules[\\/]/,
+          test: /node_modules/,
           name: "vendors",
           chunks: "all",
         },

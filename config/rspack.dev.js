@@ -7,14 +7,14 @@ import { TsCheckerRspackPlugin } from "ts-checker-rspack-plugin";
 export default {
   mode: "development",
   output: {
-    filename: "static/js/[name].js",
+    assetModuleFilename: "static/assets/[name][ext][query]",
     chunkFilename: "static/js/[name].chunk.js",
-    assetModuleFilename: "static/assets/[name][ext]",
+    filename: "static/js/[name].js",
   },
   module: {
     rules: [
       {
-        test: /\.(css|sass|scss)$/,
+        test: /\.(c|sa|sc)ss$/,
         include: path.resolve("./src"),
         use: [
           "style-loader",
@@ -24,7 +24,8 @@ export default {
               importLoaders: 2,
               modules: {
                 namedExport: false,
-                localIdentName: "[name]__[local]",
+                exportLocalsConvention: "as-is",
+                localIdentName: "[name]__[local]--[hash:base64:5]",
               },
             },
           },
@@ -39,16 +40,13 @@ export default {
       },
     ],
   },
-  optimization: {
-    moduleIds: "named",
-  },
   plugins: [
     new rspack.HtmlRspackPlugin({
       title: "Webpack Dev",
       template: path.resolve("./index.html"),
     }),
-    new TsCheckerRspackPlugin(),
     new ReactRefreshPlugin(),
+    new TsCheckerRspackPlugin(),
   ],
   devtool: "eval-cheap-module-source-map",
   devServer: {

@@ -1,5 +1,16 @@
 /// <reference types="react" />
 /// <reference types="react-dom" />
+/// <reference types="@rspack/core/module" />
+
+// import.meta
+interface ImportMetaEnv {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
 
 // css
 type CSSModuleClasses = { readonly [key: string]: string };
@@ -20,6 +31,11 @@ declare module "*.scss" {
 }
 
 // images
+declare module "*.avif" {
+  const src: string;
+  export default src;
+}
+
 declare module "*.bmp" {
   const src: string;
   export default src;
@@ -51,8 +67,11 @@ declare module "*.png" {
 }
 
 declare module "*.svg" {
-  const src: string;
-  export default src;
+  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
+  const content: string;
+
+  export { ReactComponent };
+  export default content;
 }
 
 declare module "*.webp" {
@@ -136,6 +155,7 @@ declare module "*.pdf" {
   const src: string;
   export default src;
 }
+
 declare module "*.txt" {
   const src: string;
   export default src;
