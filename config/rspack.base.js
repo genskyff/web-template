@@ -15,7 +15,6 @@ export default {
       {
         test: /\.(jsx?|tsx?)$/,
         include: path.resolve("./src"),
-        exclude: /node_modules[\\/]core-js/,
         loader: "builtin:swc-loader",
         options: {
           env: {
