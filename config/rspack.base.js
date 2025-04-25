@@ -18,7 +18,7 @@ export default {
         loader: "builtin:swc-loader",
         options: {
           env: {
-            coreJs: "3.41",
+            coreJs: "3.42",
             mode: "usage",
             target: pkg.browserslist,
           },
