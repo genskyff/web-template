@@ -20,7 +20,7 @@ export default {
           env: {
             coreJs: "3.42",
             mode: "usage",
-            target: pkg.browserslist,
+            targets: pkg.browserslist,
           },
           jsc: {
             parser: {
