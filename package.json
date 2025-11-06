@@ -1,15 +1,14 @@
 {
   "name": "rspack-template",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "rspack serve --mode=development --nodeEnv=development",
     "build": "rspack build --mode=production --nodeEnv=production --profile",
     "preview": "rspack preview --nodeEnv=production",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0 && tsc --noEmit",
-    "lint:fix": "eslint . --report-unused-disable-directives --max-warnings 0 --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:fix": "eslint . --report-unused-disable-directives --max-warnings 0 --fix"
   },
   "dependencies": {
     "core-js": "^3.46.0",
@@ -19,28 +18,28 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@rspack/cli": "^1.6.0",
-    "@rspack/core": "^1.6.0",
+    "@eslint/js": "^9.39.1",
+    "@rspack/cli": "^1.6.1",
+    "@rspack/core": "^1.6.1",
     "@rspack/plugin-react-refresh": "^1.5.2",
     "@types/lodash-es": "^4.17.12",
-    "@types/node": "^24.9.2",
+    "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "css-loader": "^7.1.2",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.1",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.4.0",
+    "globals": "^16.5.0",
     "prettier": "^3.6.2",
     "react-refresh": "^0.18.0",
-    "sass": "^1.93.2",
+    "sass": "^1.93.3",
     "sass-loader": "^16.0.6",
     "style-loader": "^4.0.0",
-    "ts-checker-rspack-plugin": "^1.1.6",
+    "ts-checker-rspack-plugin": "^1.2.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2",
+    "typescript-eslint": "^8.46.3",
     "webpack-merge": "^6.0.1"
   },
   "browserslist": [
