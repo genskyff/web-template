@@ -19,7 +19,7 @@ This is a development template based on Webpack, designed for projects using Rea
 
 Make sure you have the following installed:
 
-- Node.js (v20 or higher)
+- Node.js (v22 or higher)
 - pnpm
 
 ### Installation
