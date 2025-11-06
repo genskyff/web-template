@@ -19,7 +19,7 @@ This is a development template based on Rspack, designed for projects using Reac
 
 Make sure you have the following installed:
 
-- Node.js (v20 or higher)
+- Node.js (v22 or higher)
 - pnpm
 
 ### Installation
