@@ -55,7 +55,7 @@ export default {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /node_modules/,
+          test: /[\\/]node_modules[\\/]/,
           name: "vendors",
           chunks: "all",
         },
