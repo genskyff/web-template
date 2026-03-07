@@ -1,6 +1,6 @@
-import { useState, type FC } from "react";
-import reactLogo from "./assets/react.svg";
-import styles from "./App.scss";
+import { useState, type FC } from 'react';
+import reactLogo from './assets/react.svg';
+import styles from './App.scss';
 
 const App: FC = () => {
   const [count, setCount] = useState(0);

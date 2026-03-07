@@ -15,148 +15,145 @@ interface ImportMeta {
 // css
 type CSSModuleClasses = { readonly [key: string]: string };
 
-declare module "*.css" {
+declare module '*.css' {
   const classes: CSSModuleClasses;
   export default classes;
 }
 
-declare module "*.sass" {
+declare module '*.sass' {
   const classes: CSSModuleClasses;
   export default classes;
 }
 
-declare module "*.scss" {
+declare module '*.scss' {
   const classes: CSSModuleClasses;
   export default classes;
 }
 
 // images
-declare module "*.avif" {
+declare module '*.avif' {
   const src: string;
   export default src;
 }
 
-declare module "*.bmp" {
+declare module '*.bmp' {
   const src: string;
   export default src;
 }
 
-declare module "*.gif" {
+declare module '*.gif' {
   const src: string;
   export default src;
 }
 
-declare module "*.ico" {
+declare module '*.ico' {
   const src: string;
   export default src;
 }
 
-declare module "*.jpg" {
+declare module '*.jpg' {
   const src: string;
   export default src;
 }
 
-declare module "*.jpeg" {
+declare module '*.jpeg' {
   const src: string;
   export default src;
 }
 
-declare module "*.png" {
+declare module '*.png' {
   const src: string;
   export default src;
 }
 
-declare module "*.svg" {
-  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
-  const content: string;
-
-  export { ReactComponent };
-  export default content;
+declare module '*.svg' {
+  const src: string;
+  export default src;
 }
 
-declare module "*.webp" {
+declare module '*.webp' {
   const src: string;
   export default src;
 }
 
 // media
-declare module "*.aac" {
+declare module '*.aac' {
   const src: string;
   export default src;
 }
 
-declare module "*.flac" {
+declare module '*.flac' {
   const src: string;
   export default src;
 }
 
-declare module "*.m4a" {
+declare module '*.m4a' {
   const src: string;
   export default src;
 }
 
-declare module "*.mov" {
+declare module '*.mov' {
   const src: string;
   export default src;
 }
 
-declare module "*.mp3" {
+declare module '*.mp3' {
   const src: string;
   export default src;
 }
 
-declare module "*.mp4" {
+declare module '*.mp4' {
   const src: string;
   export default src;
 }
 
-declare module "*.ogg" {
+declare module '*.ogg' {
   const src: string;
   export default src;
 }
 
-declare module "*.wav" {
+declare module '*.wav' {
   const src: string;
   export default src;
 }
 
-declare module "*.webm" {
+declare module '*.webm' {
   const src: string;
   export default src;
 }
 
 // fonts
-declare module "*.eot" {
+declare module '*.eot' {
   const src: string;
   export default src;
 }
 
-declare module "*.otf" {
+declare module '*.otf' {
   const src: string;
   export default src;
 }
 
-declare module "*.ttf" {
+declare module '*.ttf' {
   const src: string;
   export default src;
 }
 
-declare module "*.woff" {
+declare module '*.woff' {
   const src: string;
   export default src;
 }
-declare module "*.woff2" {
+declare module '*.woff2' {
   const src: string;
   export default src;
 }
 
 // documents
-declare module "*.pdf" {
+declare module '*.pdf' {
   const src: string;
   export default src;
 }
 
-declare module "*.txt" {
+declare module '*.txt' {
   const src: string;
   export default src;
 }

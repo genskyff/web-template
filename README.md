@@ -26,21 +26,21 @@ Make sure you have the following installed:
 
 1. Clone the repository:
 
-    ```shell
-    git clone <repository-url>
-    ```
+   ```shell
+   git clone <repository-url>
+   ```
 
 2. Navigate to the project directory:
 
-    ```shell
-    cd <project-directory>
-    ```
+   ```shell
+   cd <project-directory>
+   ```
 
 3. Install dependencies:
 
-    ```shell
-    pnpm install
-    ```
+   ```shell
+   pnpm install
+   ```
 
 ### Running the Development Server
 
@@ -49,6 +49,7 @@ To start the development server, run:
 ```shell
 pnpm dev
 ```
+
 ### Building for Production
 
 To build the project for production, run:
