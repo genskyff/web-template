@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'node:path';
 import rspack from '@rspack/core';
 import pkg from '../package.json' with { type: 'json' };
 
@@ -18,7 +18,7 @@ export default {
         loader: 'builtin:swc-loader',
         options: {
           env: {
-            coreJs: '3.48',
+            coreJs: '3.49',
             mode: 'usage',
             targets: pkg.browserslist,
           },

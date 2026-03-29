@@ -2,16 +2,6 @@
 /// <reference types="react-dom" />
 /// <reference types="@rspack/core/module" />
 
-// import.meta
-interface ImportMetaEnv {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
-
 // css
 type CSSModuleClasses = { readonly [key: string]: string };
 

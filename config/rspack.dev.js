@@ -1,8 +1,8 @@
-import path from 'path';
+import path from 'node:path';
 import rspack from '@rspack/core';
-import pkg from '../package.json' with { type: 'json' };
 import ReactRefreshPlugin from '@rspack/plugin-react-refresh';
 import { TsCheckerRspackPlugin } from 'ts-checker-rspack-plugin';
+import pkg from '../package.json' with { type: 'json' };
 
 export default {
   mode: 'development',
