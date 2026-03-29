@@ -11,7 +11,7 @@ This is a development template based on Rspack, designed for projects using Reac
 - **Lightning CSS**: An extremely fast CSS parser, transformer, bundler, and minifier.
 - **Rspack**: A Webpack-based build tool that provides a simple and flexible configuration.
 - **pnpm**: A fast, disk space efficient package manager.
-- **ESLint + Prettier**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
+- **Biome**: A JavaScript and TypeScript linter and formatter that is designed to be fast and efficient.
 
 ## Getting Started
 
@@ -58,10 +58,11 @@ To build the project for production, run:
 pnpm build
 ```
 
-### Linting
+### Lint and format
 
-To lint the project, run:
+To lint and format the project, run:
 
 ```shell
-pnpm lint
+pnpm check
+pnpm fix
 ```
