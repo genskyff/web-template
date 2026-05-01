@@ -2,26 +2,20 @@ name: Web
 
 on:
   push:
-    branches: ['**']
+    branches: [ "**" ]
   pull_request:
-    branches: ['**']
+    branches: [ "**" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [22.x, 24.x]
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ matrix.node-version }}
+      - name: Setup Node.js
+        uses: jdx/mise-action@v4
 
       - name: Install packages
         run: |

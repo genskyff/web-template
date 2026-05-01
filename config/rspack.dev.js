@@ -1,6 +1,6 @@
 import path from 'node:path';
 import rspack from '@rspack/core';
-import ReactRefreshPlugin from '@rspack/plugin-react-refresh';
+import { ReactRefreshRspackPlugin } from '@rspack/plugin-react-refresh';
 import { TsCheckerRspackPlugin } from 'ts-checker-rspack-plugin';
 import pkg from '../package.json' with { type: 'json' };
 
@@ -45,7 +45,7 @@ export default {
       title: 'Webpack Dev',
       template: path.resolve('./index.html'),
     }),
-    new ReactRefreshPlugin(),
+    new ReactRefreshRspackPlugin(),
     new TsCheckerRspackPlugin(),
   ],
   devtool: 'eval-cheap-module-source-map',
