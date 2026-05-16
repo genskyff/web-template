@@ -32,7 +32,7 @@ export default {
           {
             loader: 'builtin:lightningcss-loader',
             options: {
-              targets: pkg.browserslist,
+              targets: pkg.browserslist.production,
             },
           },
           'sass-loader',
