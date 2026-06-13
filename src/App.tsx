@@ -12,7 +12,9 @@ const App: FC = () => {
         Edit <code>src/App.tsx</code> and save to reload.
       </div>
       <div>
-        <button onClick={() => setCount(count + 1)}>Click me</button>
+        <button type="button" onClick={() => setCount(count + 1)}>
+          Click me
+        </button>
         <div>Count: {count}</div>
       </div>
     </>
