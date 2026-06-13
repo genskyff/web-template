@@ -6,7 +6,7 @@ import devConfig from './config/rspack.dev';
 import prodConfig from './config/rspack.prod';
 
 // biome-ignore lint/suspicious/noExplicitAny: _
-export default (_env: any, args: { mode: any }) => {
+export default (_env: any, args: any) => {
   switch (args.mode) {
     case 'development':
       return merge<Configuration>(baseConfig, devConfig);

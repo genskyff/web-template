@@ -74,7 +74,7 @@ const config: Configuration = {
     alias: {
       '@': path.resolve('./src'),
     },
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '...'],
+    extensions: ['.ts', '.tsx', '...'],
   },
   optimization: {
     runtimeChunk: true,
