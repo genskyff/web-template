@@ -1,8 +1,9 @@
 import path from 'node:path';
+import type { Configuration } from '@rspack/core';
 import rspack from '@rspack/core';
 import pkg from '../package.json' with { type: 'json' };
 
-export default {
+const config: Configuration = {
   mode: 'production',
   bail: true,
   output: {
@@ -42,14 +43,7 @@ export default {
   },
   optimization: {
     minimizer: [
-      new rspack.LightningCssMinimizerRspackPlugin({
-        extractComments: false,
-        minimizerOptions: {
-          format: {
-            comments: false,
-          },
-        },
-      }),
+      new rspack.LightningCssMinimizerRspackPlugin(),
       new rspack.SwcJsMinimizerRspackPlugin(),
     ],
   },
@@ -65,3 +59,5 @@ export default {
   ],
   devtool: 'source-map',
 };
+
+export default config;

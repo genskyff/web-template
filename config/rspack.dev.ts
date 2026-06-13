@@ -1,10 +1,11 @@
 import path from 'node:path';
+import type { Configuration } from '@rspack/core';
 import rspack from '@rspack/core';
 import { ReactRefreshRspackPlugin } from '@rspack/plugin-react-refresh';
 import { TsCheckerRspackPlugin } from 'ts-checker-rspack-plugin';
 import pkg from '../package.json' with { type: 'json' };
 
-export default {
+const config: Configuration = {
   mode: 'development',
   output: {
     assetModuleFilename: 'static/assets/[name][ext][query]',
@@ -53,3 +54,5 @@ export default {
     port: 8000,
   },
 };
+
+export default config;
