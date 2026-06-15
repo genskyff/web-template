@@ -16,7 +16,8 @@
     "includes": ["**/*.{js,jsx,ts,tsx,css,scss}"]
   },
   "formatter": {
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "lineWidth": 100
   },
   "javascript": {
     "formatter": {

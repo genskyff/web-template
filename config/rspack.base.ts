@@ -21,9 +21,7 @@ const config: Configuration = {
           env: {
             coreJs: '3.49',
             mode: 'usage',
-            targets: isDev
-              ? pkg.browserslist.development
-              : pkg.browserslist.production,
+            targets: isDev ? pkg.browserslist.development : pkg.browserslist.production,
           },
           jsc: {
             parser: {
@@ -88,12 +86,7 @@ const config: Configuration = {
       },
     },
   },
-  plugins: [
-    new rspack.ContextReplacementPlugin(
-      /moment[\\/]locale$/,
-      /en|ja|zh-cn|zh-tw/,
-    ),
-  ],
+  plugins: [new rspack.ContextReplacementPlugin(/moment[\\/]locale$/, /en|ja|zh-cn|zh-tw/)],
 };
 
 export default config;
