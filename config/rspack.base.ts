@@ -34,6 +34,7 @@ const config: Configuration = {
                 development: isDev,
                 refresh: isDev,
               },
+              reactCompiler: true,
             },
           },
         },
