@@ -1,6 +1,8 @@
 import path from 'node:path';
+
 import type { Configuration } from '@rspack/core';
 import rspack from '@rspack/core';
+
 import pkg from '../package.json' with { type: 'json' };
 
 const isDev = process.env.NODE_ENV === 'development';

@@ -11,7 +11,7 @@ This is a development template based on Rspack, designed for projects using Reac
 - **Lightning CSS**: An extremely fast CSS parser, transformer, bundler, and minifier.
 - **Rspack**: A Webpack-based build tool that provides a simple and flexible configuration.
 - **pnpm**: A fast, disk space efficient package manager.
-- **Biome**: A JavaScript and TypeScript linter and formatter that is designed to be fast and efficient.
+- **Oxfmt&Oxfmt**: A code formatter that supports multiple languages and is highly configurable.
 
 ## Getting Started
 

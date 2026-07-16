@@ -1,8 +1,10 @@
 import path from 'node:path';
+
 import type { Configuration } from '@rspack/core';
 import rspack from '@rspack/core';
 import { ReactRefreshRspackPlugin } from '@rspack/plugin-react-refresh';
 import { TsCheckerRspackPlugin } from 'ts-checker-rspack-plugin';
+
 import pkg from '../package.json' with { type: 'json' };
 
 const config: Configuration = {

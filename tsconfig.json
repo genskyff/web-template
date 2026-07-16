@@ -41,5 +41,5 @@
     // Completeness
     "skipLibCheck": true
   },
-  "include": ["config", "src", "*.ts"],
+  "include": ["config", "src", "*.ts"]
 }
