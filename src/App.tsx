@@ -2,14 +2,12 @@ import { type FC, useState } from 'react';
 
 import reactLogo from './assets/react.svg';
 
-import styles from './App.scss';
-
 const App: FC = () => {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <img src={reactLogo} className={styles.logo} alt="logo" />
+      <img src={reactLogo} alt="logo" />
       <div>
         Edit <code>src/App.tsx</code> and save to reload.
       </div>
