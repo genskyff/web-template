@@ -1,17 +1,14 @@
-# Rsbuild Template
+# Web Template
 
-This is a development template based on Rsbuild, designed for projects using React, TypeScript, and SCSS. The package manager used in this template is pnpm.
+A React + TypeScript starter built on Rsbuild.
 
 ## Features
 
-- **React**: A JavaScript library for building user interfaces.
-- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
-- **SWC**: An extensible Rust-based platform for the next generation of fast developer tools
-- **SCSS**: A preprocessor scripting language that is interpreted or compiled into CSS.
-- **Lightning CSS**: An extremely fast CSS parser, transformer, bundler, and minifier.
-- **Rsbuild**: An Rspack-based build tool that provides out-of-the-box defaults with minimal configuration.
-- **pnpm**: A fast, disk space efficient package manager.
-- **Oxfmt&Oxfmt**: A code formatter that supports multiple languages and is highly configurable.
+- **Rsbuild**: Rspack-based build tool, minimal config on top of its defaults.
+- **React**: With React Compiler enabled.
+- **TypeScript**: Type checked in a separate process.
+- **Tailwind CSS**: With self-hosted Noto Sans SC.
+- **Oxlint & Oxfmt**: Rust-based linter and formatter.
 
 ## Getting Started
 
