@@ -66,9 +66,6 @@ importers:
       daisyui:
         specifier: ^5.7.9
         version: 5.7.9
-      happy-dom:
-        specifier: ^20.11.1
-        version: 20.11.1
       oxfmt:
         specifier: ^0.61.0
         version: 0.61.0
@@ -1817,11 +1814,13 @@ snapshots:
     dependencies:
       csstype: 3.2.3
 
-  '@types/whatwg-mimetype@3.0.2': {}
+  '@types/whatwg-mimetype@3.0.2':
+    optional: true
 
   '@types/ws@8.18.1':
     dependencies:
       '@types/node': 26.1.2
+    optional: true
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     optional: true
@@ -1899,6 +1898,7 @@ snapshots:
   buffer-image-size@0.6.4:
     dependencies:
       '@types/node': 26.1.2
+    optional: true
 
   chokidar@3.6.0:
     dependencies:
@@ -1929,7 +1929,8 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.3.3
 
-  entities@7.0.1: {}
+  entities@7.0.1:
+    optional: true
 
   fill-range@7.1.1:
     dependencies:
@@ -1960,6 +1961,7 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    optional: true
 
   hyperdyperid@1.2.0: {}
 
@@ -2202,9 +2204,11 @@ snapshots:
 
   undici-types@8.3.0: {}
 
-  whatwg-mimetype@3.0.0: {}
+  whatwg-mimetype@3.0.0:
+    optional: true
 
-  ws@8.21.1: {}
+  ws@8.21.1:
+    optional: true
 
   zustand@5.0.14(@types/react@19.2.18)(react@19.2.8):
     optionalDependencies:
