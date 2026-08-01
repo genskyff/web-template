@@ -1,6 +1,5 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/noto-sans-sc';
-
-@theme {
-  --font-sans: 'Noto Sans SC Variable', system-ui, sans-serif;
+@plugin "daisyui" {
+  themes: cmyk --default;
+  logs: false;
 }

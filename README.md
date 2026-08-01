@@ -7,47 +7,28 @@ A React + TypeScript starter built on Rsbuild.
 - **Rsbuild**: Rspack-based build tool, minimal config on top of its defaults.
 - **React**: With React Compiler enabled.
 - **TypeScript**: Type checked in a separate process.
-- **Tailwind CSS**: With self-hosted Noto Sans SC.
+- **Tailwind CSS & daisyUI**: Utility-first styling with themed components.
+- **React Router, Zustand, Lucide, Lodash**: Routing, state, icons, utilities.
 - **Oxlint & Oxfmt**: Rust-based linter and formatter.
 
 ## Getting Started
 
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node.js (v24 or later)
-
-Install the dependencies:
+Requires Node.js 24 or later.
 
 ```shell
 corepack enable
 pnpm install
-```
-
-### Development
-
-Start the dev server:
-
-```shell
 pnpm dev
 ```
 
-Build the app for production:
+## Scripts
 
-```shell
-pnpm build
-```
+| Command        | Description                        |
+| -------------- | ---------------------------------- |
+| `pnpm dev`     | Start the dev server               |
+| `pnpm build`   | Build for production               |
+| `pnpm preview` | Serve the production build locally |
+| `pnpm check`   | Lint and verify formatting         |
+| `pnpm fix`     | Lint and format, writing fixes     |
 
-Preview the production build locally:
-
-```shell
-pnpm preview
-```
-
-Lint and format the code:
-
-```shell
-pnpm check
-pnpm fix
-```
+The demo page lives in `src/pages` and `src/stores`. Delete it to start fresh.
