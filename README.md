@@ -18,7 +18,6 @@ Requires Node.js 24 or later.
 ```shell
 corepack enable
 pnpm install
-pnpm dev
 ```
 
 ## Scripts
