@@ -6,8 +6,11 @@ on:
     branches:
       - '**'
 
+permissions:
+  contents: read
+
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
 
     steps:
