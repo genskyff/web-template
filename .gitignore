@@ -4,9 +4,9 @@
 *.log*
 
 # Dist
-.pnpm-store
 node_modules
-dist
+.pnpm-store
+/dist
 
 # IDE
 .idea
