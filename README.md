@@ -13,10 +13,10 @@ A React + TypeScript starter built on Rsbuild.
 
 ## Getting Started
 
-Requires Node.js 24 or later.
+Node.js and pnpm are managed by [mise](https://mise.jdx.dev/).
 
 ```shell
-corepack enable
+mise install
 pnpm install
 ```
 
