@@ -9,6 +9,7 @@ A React + TypeScript starter built on Rsbuild.
 - **TypeScript**: Type checked in a separate process.
 - **Tailwind CSS & daisyUI**: Utility-first styling with themed components.
 - **React Router, Zustand, Lucide, Lodash**: Routing, state, icons, utilities.
+- **Rstest & Testing Library**: Unit and component tests in happy-dom, colocated with the source.
 - **Oxlint & Oxfmt**: Rust-based linter and formatter.
 
 ## Getting Started
