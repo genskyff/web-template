@@ -10,5 +10,8 @@ node_modules
 .pnpm-store
 /dist
 
+# Profile
+.rspack-profile-*/
+
 # IDE
 .idea
