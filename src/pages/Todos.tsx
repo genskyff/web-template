@@ -1,6 +1,6 @@
 import { partition } from 'lodash-es';
 import { Plus, Trash2 } from 'lucide-react';
-import { type FC, type FormEvent, useState } from 'react';
+import { type FC, type SubmitEvent, useState } from 'react';
 
 import { type Todo, useTodoStore } from '@/stores/todo';
 
@@ -36,7 +36,7 @@ const Todos: FC = () => {
 
   const [done, active] = partition(todos, (todo) => todo.done);
 
-  const submit = (event: FormEvent) => {
+  const submit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     const text = draft.trim();
     if (text) {
